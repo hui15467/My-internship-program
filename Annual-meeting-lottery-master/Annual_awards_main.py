@@ -13,7 +13,7 @@ import pygame
 
 from j import test
 
-fullScreen = True
+# fullScreen = True
 mode = 0
 mouse_scan = [(1031, 498, 116, 89), (1031, 436, 91, 68)]
 pos_scan = [(683, 141, 683, 630), (650, 130, 650, 540), ()]
@@ -116,14 +116,14 @@ if __name__ == "__main__":
     bg = 'bg.png'
     mg = 'gc_cz.png'
 
-    if fullScreen:
-        mode = 0
-        bg = 'bg_1366x768.png'
-        screen = pygame.display.set_mode((1366, 768), FULLSCREEN, 32)
-    else:
-        mode = 1
-        bg = 'bg.png'
-        screen = pygame.display.set_mode((1340, 670), 0, 32)
+    # if fullScreen:
+    #     mode = 0
+    #     bg = 'bg_1366x768.png'
+    #     screen = pygame.display.set_mode((1366, 768), FULLSCREEN, 32)
+    #else:
+    mode = 1
+    bg = 'bg.png'
+    screen = pygame.display.set_mode((1340, 670), 0, 32)
 
     pygame.display.set_caption("Annual meeting lottery")
 
@@ -157,14 +157,14 @@ if __name__ == "__main__":
         bg = 'bg.png'
         mg = 'gc_cz.png'
 
-        if fullScreen:
-            mode = 0
-            bg = 'bg_1366x768.png'
-            screen = pygame.display.set_mode((1366, 768), FULLSCREEN, 32)
-        else:
-            mode = 1
-            bg = 'bg.png'
-            screen = pygame.display.set_mode((1340, 670), 0, 32)
+        # if fullScreen:
+        #     mode = 0
+        #     bg = 'bg_1366x768.png'
+        #     screen = pygame.display.set_mode((1366, 768), FULLSCREEN, 32)
+        # else:
+        mode = 1
+        bg = 'bg.png'
+        screen = pygame.display.set_mode((1340, 670), 0, 32)
 
         pygame.display.set_caption("Annual meeting lottery")
 
