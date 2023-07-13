@@ -106,7 +106,9 @@ if __name__ == "__main__":
         show_name_list(name_list)
     if a == 2:
         job_num, job_name, job_sex, job_contact, name_list = get_name_list_from_excel(r'name_file.xlsx')
-        job1, job2, job3, job4, work = get_name_list_from_excel(r'name_file.xlsx')
+        # job1, job2, job3, job4, work = get_name_list_from_excel(r'name_file.xlsx')
+        filename1 = input("请输入文件名（包含文件扩展名）：")
+        job1, job2, job3, job4, work = get_name_list_from_excel(filename1)
         print(len(name_list))
         show_name_list(name_list)
 
