@@ -105,9 +105,9 @@ if __name__ == "__main__":
         print(len(name_list))
         show_name_list(name_list)
     if a == 2:
-        job_num, job_name, job_sex, job_contact, name_list = get_name_list_from_excel(r'name_file.xlsx')
         # job1, job2, job3, job4, work = get_name_list_from_excel(r'name_file.xlsx')
         filename1 = input("请输入文件名（包含文件扩展名）：")
+        job_num, job_name, job_sex, job_contact, name_list = get_name_list_from_excel(filename1)
         job1, job2, job3, job4, work = get_name_list_from_excel(filename1)
         print(len(name_list))
         show_name_list(name_list)
@@ -120,7 +120,7 @@ if __name__ == "__main__":
     #     mode = 0
     #     bg = 'bg_1366x768.png'
     #     screen = pygame.display.set_mode((1366, 768), FULLSCREEN, 32)
-    #else:
+    # else:
     mode = 1
     bg = 'bg.png'
     screen = pygame.display.set_mode((1340, 670), 0, 32)
@@ -147,8 +147,9 @@ if __name__ == "__main__":
         print("是否选择重置抽奖名单1:重置,2:不重置")
         p = int(input('输入你的选择:'))
         if p == 1:
+            name_list.clear()
             name_list = work
-        print('请输入奖项数目:')
+        print('请输入奖项数目(1~12):')
         pirze_num = int(input())
         index = random.randint(0, len(name_list) - 1)
         pause_flag = False
@@ -236,7 +237,7 @@ if __name__ == "__main__":
             res = "%s %s %s %s" % (winner[index])
             text_obj = font.render(res, True, (255, 255, 255), (255, 0, 0))
             text_pos = text_obj.get_rect()
-            text_pos.center = (200, index*100+30)
+            text_pos.center = (220, index * 50 + 30)
             screen2.blit(text_obj, text_pos)
             pygame.display.update()
 
